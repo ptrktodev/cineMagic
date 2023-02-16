@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
 import { ReactComponent as Pop } from "./Assets/popcorn.svg";
-import Button from "./Componentes/Fixed/Button";
+import Button from "./Componentes/Fixed/ButtonHeader";
 
 const Header = () => {
   return (

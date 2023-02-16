@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Serie from "./Serie";
+import PosterSerie from "./PosterSeries";
 
 const Login = () => {
   return (
@@ -8,6 +9,7 @@ const Login = () => {
       <div>
         <Routes>
           <Route path="/" element={<Serie />} />
+          <Route path="serie/:id" element={<PosterSerie />} />
         </Routes>
       </div>
     </section>

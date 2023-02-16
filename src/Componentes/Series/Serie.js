@@ -12,7 +12,7 @@ const Home = () => {
   function nextPage() {
     setCount(count + 1);
     window.scrollTo({
-      top: 150,
+      top: 0,
       left: 0,
       behavior: "smooth",
     });
@@ -21,14 +21,14 @@ const Home = () => {
     if (count === 1) {
       setCount(count - 0);
       window.scrollTo({
-        top: 150,
+        top: 0,
         left: 0,
         behavior: "smooth",
       });
     } else {
       setCount(count - 1);
       window.scrollTo({
-        top: 150,
+        top: 0,
         left: 0,
         behavior: "smooth",
       });
@@ -51,19 +51,30 @@ const Home = () => {
 
   return (
     <section className="container animeLeft">
-      <div className={styles.div}>
-        {movies.map((movie) => (
-          <div key={movie.id} className={styles.divMovies}>
-            <Link to={`serie/${movie.id}`}>
-              <img
-                src={`${image}${movie.poster_path}`}
-                alt=""
-                className={styles.divMoviesImg}
-              />
-            </Link>
-            <h2>{movie.name}</h2>
-          </div>
-        ))}
+      <div className={styles.paddingBottom}>
+        <div className={styles.div}>
+          {movies.map((movie) => (
+            <div key={movie.id} className={styles.divMovies}>
+              <Link to={`serie/${movie.id}`}>
+                <img
+                  src={`${image}${movie.poster_path}`}
+                  alt=""
+                  className={styles.divMoviesImg}
+                />
+              </Link>
+              <h2>{movie.name}</h2>
+            </div>
+          ))}
+        </div>
+        <div className={styles.div_buttons}>
+          <button className="buttonsCount" onClick={prevPage}>
+            Prev
+          </button>
+          <p>{count}</p>
+          <button className="buttonsCount" onClick={nextPage}>
+            Next
+          </button>
+        </div>
       </div>
     </section>
   );

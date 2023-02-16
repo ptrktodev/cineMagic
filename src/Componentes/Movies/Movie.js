@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../Fixed/Button";
 import styles from "./Movie.module.css";
 
 const Home = () => {
@@ -11,7 +10,7 @@ const Home = () => {
   function nextPage() {
     setCount(count + 1);
     window.scrollTo({
-      top: 150,
+      top: 0,
       left: 0,
       behavior: "smooth",
     });
@@ -20,14 +19,14 @@ const Home = () => {
     if (count === 1) {
       setCount(count - 0);
       window.scrollTo({
-        top: 150,
+        top: 0,
         left: 0,
         behavior: "smooth",
       });
     } else {
       setCount(count - 1);
       window.scrollTo({
-        top: 150,
+        top: 0,
         left: 0,
         behavior: "smooth",
       });
@@ -51,15 +50,26 @@ const Home = () => {
 
   return (
     <section className="container animeLeft">
-      <div className={styles.div}>
-        {movies.map((movie) => (
-          <div key={movie.id} className={styles.divMovies}>
-            <Link to={`movie/${movie.id}`} className={styles.divMoviesImg}>
-              <img src={`${image}${movie.poster_path}`} />
-            </Link>
-            <h2>{movie.title}</h2>
-          </div>
-        ))}
+      <div className={styles.paddingBottom}>
+        <div className={styles.div}>
+          {movies.map((movie) => (
+            <div key={movie.id} className={styles.divMovies}>
+              <Link to={`poster/${movie.id}`} className={styles.divMoviesImg}>
+                <img src={`${image}${movie.poster_path}`} />
+              </Link>
+              <h2>{movie.title}</h2>
+            </div>
+          ))}
+        </div>
+        <div className={styles.div_buttons}>
+          <button className="buttonsCount" onClick={prevPage}>
+            Prev
+          </button>
+          <p>{count}</p>
+          <button className="buttonsCount" onClick={nextPage}>
+            Next
+          </button>
+        </div>
       </div>
     </section>
   );

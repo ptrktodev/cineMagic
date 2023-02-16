@@ -9,9 +9,7 @@ body {
   margin: 0px;
   --color-primary: #000000;
   background: rgb(255, 255, 255);
-  --type-first: Helvetica, Arial, sans-serif;
-  --type-second: "Spectral", georgia;
-  font-family: var(--type-first);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 h1,
 h2,
@@ -52,7 +50,7 @@ a {
 }
 
 .container {
-  max-width: 80rem;
+  max-width: 60rem;
   padding: 0 1rem;
   margin: 0 auto;
 }
@@ -95,9 +93,5 @@ a {
 .App {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh + 10rem);
-}
-
-.AppBody {
-  flex: 1;
+  min-height: calc(100vh - 6rem);
 }

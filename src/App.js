@@ -7,6 +7,7 @@ import Login from "./Componentes/Login/Login";
 import HomeMovie from "./Componentes/Movies/Home-movie";
 import HomeSerie from "./Componentes/Series/Home-serie";
 import Footer from "./Footer";
+import NotFound from "./NotFound";
 
 function App() {
   return (
@@ -15,10 +16,11 @@ function App() {
         <Header />
         <main className="AppBody">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<NotFound />} />
             <Route path="movies/*" element={<HomeMovie />} />
             <Route path="series/*" element={<HomeSerie />} />
             <Route path="login/*" element={<Login />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

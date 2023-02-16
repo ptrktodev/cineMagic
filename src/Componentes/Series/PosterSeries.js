@@ -1,6 +1,5 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import "./Poster.css";
 
 const Poster = () => {
   const { id } = useParams();
@@ -12,7 +11,7 @@ const Poster = () => {
     async function apiID(id) {
       const key = "04105f3a63399900b37fa84e3ec7168e";
       const response = await fetch(
-        `https://api.themoviedb.org/3/movie/${id}?api_key=${key}`
+        `https://api.themoviedb.org/3/tv/${id}?api_key=${key}`
       );
       const json = await response.json();
       setMovie(json);
@@ -24,7 +23,7 @@ const Poster = () => {
     async function apiIDvideo(id) {
       const key = "04105f3a63399900b37fa84e3ec7168e";
       const response = await fetch(
-        `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${key}&language=en-US`
+        `https://api.themoviedb.org/3/tv/${id}/videos?api_key=${key}&language=en-US`
       );
       const { results } = await response.json();
       const keyVideo =
@@ -34,7 +33,6 @@ const Poster = () => {
     apiIDvideo(id);
   }, [id]);
 
-  console.log(video);
   return (
     <section className="container">
       <div className="poster animeLeft">
@@ -43,25 +41,25 @@ const Poster = () => {
         </div>
         <div className="poster-child">
           <div className="infos-movie">
-            <h1>{movie.original_title}</h1>
-            <p>⭐ {movie.vote_average}</p>
+            <h1>{movie.name}</h1>
+            <p>⭐: {movie.vote_average}</p>
             <p>
               <b>Homepage:</b>{" "}
               <a href={movie.homepage} target="_parent">
-                Visit.
+                Visit
               </a>
             </p>
             <p>
-              <b>Descrição:</b> <span>{movie.overview}</span>
+              <b>Descrição:</b> <p>{movie.overview}</p>
             </p>
             <p>
-              <b>Linguagem original:</b> {movie.original_language}.
+              <b>Linguagem original:</b> {movie.original_language}
             </p>
             <p>
-              <b>Data de lançamento:</b> {movie.release_date}.
+              <b>Data de lançamento:</b> {movie.release_date}
             </p>
             <p>
-              <b>Status:</b> {movie.status ? "Lançado" : "Sem informações"}.
+              <b>Status:</b> {movie.status ? "Lançado" : "Sem informações"}
             </p>
           </div>
           <div className="poster-video">
@@ -74,7 +72,7 @@ const Poster = () => {
               allowfullscreen
             ></iframe>
           </div>
-        </div>
+        </div>{" "}
       </div>
     </section>
   );

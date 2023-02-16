@@ -9,7 +9,7 @@ const Login = () => {
       <div>
         <Routes>
           <Route path="/" element={<Movie />} />
-          <Route path="poster" element={<Poster />} />
+          <Route path="poster/:id" element={<Poster />} />
         </Routes>
       </div>
     </section>
