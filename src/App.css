@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -9,7 +8,7 @@ body {
   margin: 0px;
   --color-primary: #000000;
   background: rgb(255, 255, 255);
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 h1,
 h2,

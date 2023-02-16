@@ -7,16 +7,22 @@
 
 .poster-child,
 .poster-imagem {
-  padding: 1rem;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 50%;
+  min-height: 40rem;
   gap: 1rem;
 }
 
-.poster-child img {
-  width: 100%;
+.poster-child {
+  justify-content: space-between;
+  margin-bottom: 15rem;
+}
+
+.poster-imagem img {
+  max-width: 100%;
   border-radius: 0.6rem;
 }
 
@@ -31,7 +37,7 @@
 }
 
 .infos-movie p {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 .iFrame-video {
@@ -40,24 +46,38 @@
   border-radius: 0.7rem;
 }
 
-@media (max-width: 940px) {
+@media (max-width: 800px) {
   .poster {
     flex-direction: column;
   }
   .poster-child,
   .poster-imagem {
     width: 100%;
+    min-height: 30rem;
   }
   .poster-imagem {
     align-items: center;
   }
 
+  .poster-child {
+    border: 2px solid rgb(111, 25, 224);
+    margin-bottom: 15rem;
+    padding-top: 1.7rem;
+  }
+
   .poster-imagem img {
-    width: 70%;
+    min-width: 400px;
+    max-width: 50%;
     border-radius: 0.6rem;
   }
 
   .iFrame-video {
     height: 18rem;
+  }
+  .infos-movie h1 {
+    font-size: 2rem;
+  }
+  .infos-movie p {
+    font-size: 1.2rem;
   }
 }
