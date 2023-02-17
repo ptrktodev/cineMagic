@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import "./infos_series.css";
 
 const Poster = () => {
   const { id } = useParams();
@@ -8,6 +9,7 @@ const Poster = () => {
   const [video, setVideo] = React.useState([]);
   const [genres, setGenres] = React.useState([]);
   const [companies, setCompanies] = React.useState([]);
+  const [season, setSeason] = React.useState([]);
 
   React.useEffect(() => {
     async function apiID(id) {
@@ -19,6 +21,7 @@ const Poster = () => {
       setMovie(json);
       setGenres(json.genres);
       setCompanies(json.production_companies);
+      setSeason(json.seasons);
     }
     apiID(id);
   }, [id]);
@@ -104,10 +107,13 @@ const Poster = () => {
         <div className="infos-movie-1">
           <h1>More Informations</h1>
           <div>
-            <b>Season:</b> <span>{movie.number_of_seasons}</span>
+            <b>Seasons:</b> <span>{movie.number_of_seasons}</span>
           </div>
           <div>
             <b>Total episodes:</b> <span>{movie.number_of_episodes}</span>
+          </div>
+          <div>
+            <b>Run time:</b> <span>{movie.episode_run_time}min</span>
           </div>
           <div>
             <b>Tagline:</b> <span>{movie.tagline}</span>
@@ -118,6 +124,23 @@ const Poster = () => {
           <div>
             <b>Status:</b>{" "}
             <span>{movie.status ? "Lançado" : "Sem informações"}.</span>
+          </div>
+        </div>
+        <div className="Seasons">
+          <h1>Seasons</h1>
+          <div className="Seasons">
+            {season.map((el) => (
+              <div className="info_season">
+                <div className="info_season-1">
+                  <img src={`${imageURL}${el.poster_path}`} />
+                </div>
+                <div className="info_season-2">
+                  <p>{el.name}</p>
+                  <p>{el.episode_count} episodes</p>
+                  <p>{el.air_date}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

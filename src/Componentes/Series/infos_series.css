@@ -1,0 +1,57 @@
+.Seasons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem 1rem;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.Seasons h1 {
+  font-size: 2.2rem;
+  width: 100%;
+}
+
+.info_season {
+  margin-top: 1rem;
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.info_season-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.info_season-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info_season img {
+  height: 20rem;
+  width: 90%;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .Seasons {
+    gap: 0.4rem;
+    justify-content: center;
+  }
+  .info_season {
+    width: 42%;
+  }
+  .info_season img {
+    width: 100%;
+  }
+}
