@@ -41,11 +41,11 @@ const Poster = () => {
   return (
     <section className="container">
       <div className="poster animeLeft">
-        <div className="poster-imagem">
+        <div className="imagemCentral box">
           <img src={`${imageURL}${movie.poster_path}`} />
         </div>
-        <div className="poster-child">
-          <div className="infos-movie">
+        <div className="Infos box">
+          <div className="boxInfos box">
             <h1>{movie.original_title}</h1>
             <p>⭐ {movie.vote_average}</p>
             <p>
@@ -68,21 +68,11 @@ const Poster = () => {
               <span>{movie.status ? "Lançado" : "Sem informações"}.</span>
             </div>
           </div>
-          <div className="poster-video">
-            <iframe
-              className="iFrame-video"
-              src={video}
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
         </div>
-        <div className="poster-moreinfos">
+        <div className="section box">
           <div className="companies">
-            <div className="subtitles">Companies</div>
-            <div className="companiesSuperior">
+            <h1>Companies</h1>
+            <div className="listCompanies">
               <div>
                 {companies.map((el) => (
                   <li key={el}> {el.name}</li>
@@ -91,8 +81,8 @@ const Poster = () => {
             </div>
           </div>
           <div className="genres">
-            <div className="subtitles">Genres</div>
-            <div className="Genres">
+            <h1>Genres</h1>
+            <div className="listGenres">
               <div>
                 {genres.map((el) => (
                   <li key={el}> {el.name}</li>
@@ -100,6 +90,16 @@ const Poster = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="VideoYoutube box">
+          <iframe
+            className="Video"
+            src={video}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </section>

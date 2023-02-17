@@ -7,9 +7,23 @@ body {
   padding-top: 6rem;
   margin: 0px;
   --color-primary: #000000;
+  --color-secondary: #494949;
+  --size-primary: 1rem;
+  --size-title: 2rem;
+  --size-subtitle: 1.5rem
   background: rgb(255, 255, 255);
   font-family: "Poppins", sans-serif;
 }
+
+h1 {
+  font-size: var(--size-title);
+  padding: 0.8rem 0;
+}
+
+span {
+  font-size: var(--size-primary);
+}
+
 h1,
 h2,
 h3,

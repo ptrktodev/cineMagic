@@ -7,72 +7,93 @@
   margin-bottom: 13rem;
 }
 
-.poster-child,
-.poster-imagem {
-  padding: 0 1rem;
+.box {
   display: flex;
+  padding: 1.5rem 1rem;
+}
+
+.Infos,
+.imagemCentral {
   flex-direction: column;
   justify-content: center;
   width: 50%;
   gap: 1rem;
 }
 
-.poster-child {
-  justify-content: space-between;
+.Infos {
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
-.poster-imagem img {
+.imagemCentral img {
   max-width: 100%;
   border-radius: 0.6rem;
 }
 
-.infos-movie,
-.infos-movie-1 {
-  margin-top: 1rem;
-  display: flex;
+.boxInfos {
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
+  gap: 0.5rem;
 }
 
-.infos-movie-1 {
-  padding: 0 1rem;
-}
-
-.infos-movie-1 h1 {
-  font-size: 2rem;
-  margin: 10px 0;
-  text-align: center;
-}
-
-.infos-movie h1 {
-  font-size: 2rem;
-}
-
-.infos-movie p,
-.infos-movie span,
-.infos-movie-1 span,
-.infos-movie-1 p {
-  color: rgba(0, 0, 0, 0.846);
-  font-size: 0.9rem;
-}
-
-.infos-movie b {
-  font-size: 1.1rem;
-  color: rgb(0, 0, 0);
-}
-
-.iFrame-video {
+.moreInfos {
+  gap: 0.5rem;
   width: 100%;
-  height: 250px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.moreInfos h1 {
+  text-align: center;
+  width: 100%;
+}
+
+.infosMovies,
+.Network {
+  width: 45%;
+}
+
+.Network {
+  align-items: center;
+  justify-content: center;
+}
+
+.infosMovies {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.networkImagem {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.networkImagem img {
+  width: 70%;
+}
+
+.VideoYoutube {
+  width: 100%;
+  height: 22rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.Video {
+  width: 60%;
+  height: 100%;
   border-radius: 0.7rem;
 }
 
-.poster-moreinfos {
+.section {
   margin-top: 2rem;
   width: 100%;
   padding: 0 1rem;
-  display: flex;
   flex-wrap: wrap;
 }
 
@@ -86,69 +107,37 @@
   text-align: center;
 }
 
-.subtitles {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
 /* == ==*/
 
 @media (max-width: 800px) {
-  .subtitles {
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.5rem;
-    padding: 0.5rem 0;
-  }
-
-  .companiesSuperior {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-    padding: 0 1rem;
-    justify-content: center;
-  }
-
-  .companiesSuperior div {
-    width: 50%;
-  }
-
-  .Genres {
-    display: flex;
-    justify-content: center;
-    font-size: 1rem;
-  }
-  .poster {
+  .section {
     flex-direction: column;
-  }
-  .poster-child,
-  .poster-imagem {
-    width: 100%;
-    min-height: 30rem;
-  }
-  .poster-imagem {
     align-items: center;
   }
 
-  .poster-child {
+  .poster {
+    flex-direction: column;
+  }
+  .Infos,
+  .imagemCentral {
+    width: 100%;
+    min-height: 30rem;
+  }
+  .imagemCentral {
+    align-items: center;
+  }
+
+  .posterInfos {
     padding-top: 1.7rem;
   }
 
-  .poster-imagem img {
+  .imagemCentral img {
     min-width: 400px;
     max-width: 50%;
     border-radius: 0.6rem;
   }
 
-  .iFrame-video {
+  .Video {
     height: 18rem;
-  }
-  .infos-movie h1 {
-    font-size: 2rem;
-  }
-  .infos-movie p {
-    font-size: 1.2rem;
   }
 }

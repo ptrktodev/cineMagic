@@ -10,6 +10,7 @@ const Poster = () => {
   const [genres, setGenres] = React.useState([]);
   const [companies, setCompanies] = React.useState([]);
   const [season, setSeason] = React.useState([]);
+  const [network, setNetwork] = React.useState([]);
 
   React.useEffect(() => {
     async function apiID(id) {
@@ -22,6 +23,7 @@ const Poster = () => {
       setGenres(json.genres);
       setCompanies(json.production_companies);
       setSeason(json.seasons);
+      setNetwork(json.networks);
     }
     apiID(id);
   }, [id]);
@@ -43,11 +45,11 @@ const Poster = () => {
   return (
     <section className="container">
       <div className="poster animeLeft">
-        <div className="poster-imagem">
+        <div className="imagemCentral box">
           <img src={`${imageURL}${movie.poster_path}`} />
         </div>
-        <div className="poster-child">
-          <div className="infos-movie">
+        <div className="Infos box">
+          <div className="boxInfos box">
             <h1>{movie.name}</h1>
             <p>⭐ {movie.vote_average}</p>
             <p>
@@ -70,31 +72,19 @@ const Poster = () => {
               <span>{movie.status ? "Lançado" : "Sem informações"}.</span>
             </div>
           </div>
-          <div className="poster-video">
-            <iframe
-              className="iFrame-video"
-              src={video}
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
         </div>
-        <div className="poster-moreinfos">
+        <section className="section box">
           <div className="companies">
-            <div className="subtitles">Companies</div>
-            <div className="companiesSuperior">
-              <div>
-                {companies.map((el) => (
-                  <li key={el}> {el.name}</li>
-                ))}
-              </div>
+            <h1>Companies</h1>
+            <div className="listCompanies">
+              {companies.map((el) => (
+                <li key={el}> {el.name}</li>
+              ))}
             </div>
           </div>
           <div className="genres">
-            <div className="subtitles">Genres</div>
-            <div className="Genres">
+            <h1>Genres</h1>
+            <div className="listGenres">
               <div>
                 {genres.map((el) => (
                   <li key={el}> {el.name}</li>
@@ -102,46 +92,69 @@ const Poster = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="infos-movie-1">
+        <section className="moreInfos box">
           <h1>More Informations</h1>
-          <div>
-            <b>Seasons:</b> <span>{movie.number_of_seasons}</span>
+          <div className="infosMovies">
+            <p>
+              <b>Seasons:</b> <span>{movie.number_of_seasons}</span>
+            </p>
+            <p>
+              <b>Total episodes:</b> <span>{movie.number_of_episodes}</span>
+            </p>
+            <p>
+              <b>Run time:</b> <span>{movie.episode_run_time}min</span>
+            </p>
+            <p>
+              <b>Tagline:</b> <span>{movie.tagline}</span>
+            </p>
+            <p>
+              <b>Count Votes:</b> <span>{movie.vote_count}</span>.
+            </p>
+            <p>
+              <b>Status:</b>{" "}
+              <span>{movie.status ? "Lançado" : "Sem informações"}.</span>
+            </p>
           </div>
-          <div>
-            <b>Total episodes:</b> <span>{movie.number_of_episodes}</span>
-          </div>
-          <div>
-            <b>Run time:</b> <span>{movie.episode_run_time}min</span>
-          </div>
-          <div>
-            <b>Tagline:</b> <span>{movie.tagline}</span>
-          </div>
-          <div>
-            <b>Count Votes:</b> <span>{movie.vote_count}</span>.
-          </div>
-          <div>
-            <b>Status:</b>{" "}
-            <span>{movie.status ? "Lançado" : "Sem informações"}.</span>
-          </div>
-        </div>
-        <div className="Seasons">
-          <h1>Seasons</h1>
-          <div className="Seasons">
-            {season.map((el) => (
-              <div className="info_season">
-                <div className="info_season-1">
-                  <img src={`${imageURL}${el.poster_path}`} />
-                </div>
-                <div className="info_season-2">
-                  <p>{el.name}</p>
-                  <p>{el.episode_count} episodes</p>
-                  <p>{el.air_date}</p>
-                </div>
+          <div className="Network box">
+            {network.map((el) => (
+              <div key={el.id} className="networkImagem">
+                <img src={`${imageURL}${el.logo_path}`} />
               </div>
             ))}
           </div>
+        </section>
+        <div className="Seasons box">
+          <h1>Seasons</h1>
+          <div className="Seasons">
+            {season.map((el) => (
+              <div className="quadro">
+                <div className="posterImagem">
+                  {el.poster_path && (
+                    <img src={`${imageURL}${el.poster_path}`} />
+                  )}
+                </div>
+                {el.poster_path && (
+                  <div className="posterInfos">
+                    <p>{el.name}</p>
+                    <p>{el.episode_count} episodes</p>
+                    {el.air_date && <p>{el.air_date}</p>}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="VideoYoutube box">
+          <iframe
+            className="Video"
+            src={video}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </section>
