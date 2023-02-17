@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import TitleHead from "../../TitleHead";
 import styles from "../Movies/Movie.module.css";
 
 const Home = () => {
@@ -51,6 +52,7 @@ const Home = () => {
 
   return (
     <section className="container animeLeft">
+      <TitleHead title="Series" />
       <div className={styles.paddingBottom}>
         <div className={styles.div}>
           {movies.map((movie) => (

@@ -6,6 +6,8 @@ const Poster = () => {
   const imageURL = "https://image.tmdb.org/t/p/w500/";
   const [movie, setMovie] = React.useState([]);
   const [video, setVideo] = React.useState([]);
+  const [genres, setGenres] = React.useState([]);
+  const [companies, setCompanies] = React.useState([]);
 
   React.useEffect(() => {
     async function apiID(id) {
@@ -15,6 +17,8 @@ const Poster = () => {
       );
       const json = await response.json();
       setMovie(json);
+      setGenres(json.genres);
+      setCompanies(json.production_companies);
     }
     apiID(id);
   }, [id]);
@@ -42,25 +46,26 @@ const Poster = () => {
         <div className="poster-child">
           <div className="infos-movie">
             <h1>{movie.name}</h1>
-            <p>⭐: {movie.vote_average}</p>
+            <p>⭐ {movie.vote_average}</p>
             <p>
               <b>Homepage:</b>{" "}
               <a href={movie.homepage} target="_parent">
-                Visit
+                <span>Visit.</span>
               </a>
             </p>
-            <p>
-              <b>Descrição:</b> <p>{movie.overview}</p>
-            </p>
-            <p>
-              <b>Linguagem original:</b> {movie.original_language}
-            </p>
-            <p>
-              <b>Data de lançamento:</b> {movie.release_date}
-            </p>
-            <p>
-              <b>Status:</b> {movie.status ? "Lançado" : "Sem informações"}
-            </p>
+            <div>
+              <b>Description:</b> <span>{movie.overview}</span>
+            </div>
+            <div>
+              <b>Language:</b> <span>{movie.original_language}</span>
+            </div>
+            <div>
+              <b>Release date</b> <span>{movie.first_air_date}</span>.
+            </div>
+            <div>
+              <b>Status:</b>{" "}
+              <span>{movie.status ? "Lançado" : "Sem informações"}.</span>
+            </div>
           </div>
           <div className="poster-video">
             <iframe
@@ -72,7 +77,49 @@ const Poster = () => {
               allowfullscreen
             ></iframe>
           </div>
-        </div>{" "}
+        </div>
+        <div className="poster-moreinfos">
+          <div className="companies">
+            <div className="subtitles">Companies</div>
+            <div className="companiesSuperior">
+              <div>
+                {companies.map((el) => (
+                  <li key={el}> {el.name}</li>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="genres">
+            <div className="subtitles">Genres</div>
+            <div className="Genres">
+              <div>
+                {genres.map((el) => (
+                  <li key={el}> {el.name}</li>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="infos-movie-1">
+          <h1>More Informations</h1>
+          <div>
+            <b>Season:</b> <span>{movie.number_of_seasons}</span>
+          </div>
+          <div>
+            <b>Total episodes:</b> <span>{movie.number_of_episodes}</span>
+          </div>
+          <div>
+            <b>Tagline:</b> <span>{movie.tagline}</span>
+          </div>
+          <div>
+            <b>Count Votes:</b> <span>{movie.vote_count}</span>.
+          </div>
+          <div>
+            <b>Status:</b>{" "}
+            <span>{movie.status ? "Lançado" : "Sem informações"}.</span>
+          </div>
+        </div>
       </div>
     </section>
   );

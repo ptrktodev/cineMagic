@@ -1,8 +1,10 @@
 .poster {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
+  margin-bottom: 13rem;
 }
 
 .poster-child,
@@ -12,13 +14,11 @@
   flex-direction: column;
   justify-content: center;
   width: 50%;
-  min-height: 40rem;
   gap: 1rem;
 }
 
 .poster-child {
   justify-content: space-between;
-  margin-bottom: 15rem;
 }
 
 .poster-imagem img {
@@ -26,18 +26,40 @@
   border-radius: 0.6rem;
 }
 
-.infos-movie {
+.infos-movie,
+.infos-movie-1 {
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 100%;
+}
+
+.infos-movie-1 {
+  padding: 0 1rem;
+}
+
+.infos-movie-1 h1 {
+  font-size: 2rem;
+  margin: 10px 0;
+  text-align: center;
 }
 
 .infos-movie h1 {
   font-size: 2rem;
 }
 
-.infos-movie p {
+.infos-movie p,
+.infos-movie span,
+.infos-movie-1 span,
+.infos-movie-1 p {
+  color: rgba(0, 0, 0, 0.846);
   font-size: 0.9rem;
+}
+
+.infos-movie b {
+  font-size: 1.1rem;
+  color: rgb(0, 0, 0);
 }
 
 .iFrame-video {
@@ -46,7 +68,58 @@
   border-radius: 0.7rem;
 }
 
+.poster-moreinfos {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.companies,
+.genres {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+}
+
+.subtitles {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* == ==*/
+
 @media (max-width: 800px) {
+  .subtitles {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .companiesSuperior {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 0 1rem;
+    justify-content: center;
+  }
+
+  .companiesSuperior div {
+    width: 50%;
+  }
+
+  .Genres {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+  }
   .poster {
     flex-direction: column;
   }
@@ -60,8 +133,6 @@
   }
 
   .poster-child {
-    border: 2px solid rgb(111, 25, 224);
-    margin-bottom: 15rem;
     padding-top: 1.7rem;
   }
 
