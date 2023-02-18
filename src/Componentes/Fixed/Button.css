@@ -1,14 +1,15 @@
-button {
+.buttonPrincipal {
   padding: 0;
   margin: 0;
   border: none;
   background: none;
   cursor: pointer;
+  color: #ffffff;
 }
 
-button {
-  --primary-color: #000000;
-  --hovered-color: #000000;
+.buttonPrincipal {
+  --primary-color: #ffffff;
+  --hovered-color: #f60101;
   position: relative;
   display: flex;
   font-weight: 600;
@@ -17,14 +18,14 @@ button {
   align-items: center;
 }
 
-button p {
+.buttonPrincipal p {
   margin: 0;
   position: relative;
   font-size: 20px;
   color: var(--primary-color);
 }
 
-button::after {
+.buttonPrincipal::after {
   position: absolute;
   content: "";
   width: 0;
@@ -35,7 +36,7 @@ button::after {
   transition: 0.3s ease-out;
 }
 
-button p::before {
+.buttonPrincipal p::before {
   position: absolute;
   /*   box-sizing: border-box; */
   content: "Subscribe";
@@ -46,20 +47,20 @@ button p::before {
   transition: 0.3s ease-out;
 }
 
-button:hover::after {
+.buttonPrincipal:hover::after {
   width: 100%;
 }
 
-button:hover p::before {
+.buttonPrincipal:hover p::before {
   width: 100%;
 }
 
-button:hover svg {
+.buttonPrincipal:hover svg {
   transform: translateX(4px);
   color: var(--hovered-color);
 }
 
-button svg {
+.buttonPrincipal svg {
   color: var(--primary-color);
   transition: 0.2s;
   position: relative;

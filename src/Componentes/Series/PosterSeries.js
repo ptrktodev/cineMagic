@@ -45,31 +45,33 @@ const Poster = () => {
   return (
     <section className="container">
       <div className="poster animeLeft">
-        <div className="imagemCentral box">
-          <img src={`${imageURL}${movie.poster_path}`} />
-        </div>
-        <div className="Infos box">
-          <div className="boxInfos box">
-            <h1>{movie.name}</h1>
-            <p>⭐ {movie.vote_average}</p>
-            <p>
-              <b>Homepage:</b>{" "}
-              <a href={movie.homepage} target="_parent">
-                <span>Visit.</span>
-              </a>
-            </p>
-            <div>
-              <b>Description:</b> <span>{movie.overview}</span>
-            </div>
-            <div>
-              <b>Language:</b> <span>{movie.original_language}</span>
-            </div>
-            <div>
-              <b>Release date</b> <span>{movie.first_air_date}</span>.
-            </div>
-            <div>
-              <b>Status:</b>{" "}
-              <span>{movie.status ? "Lançado" : "Sem informações"}.</span>
+        <div>
+          {/*           <div className="imagemCentral box">
+            <img src={`${imageURL}${movie.backdrop_path}`} />
+          </div> */}
+          <div className="Infos box">
+            <div className="boxInfos box">
+              <h1>{movie.name}</h1>
+              <p>⭐ {movie.vote_average}</p>
+              <p>
+                <b>Homepage:</b>{" "}
+                <a href={movie.homepage} target="_parent">
+                  <span>Visit.</span>
+                </a>
+              </p>
+              <div>
+                <b>Description:</b> <span>{movie.overview}</span>
+              </div>
+              <div>
+                <b>Language:</b> <span>{movie.original_language}</span>
+              </div>
+              <div>
+                <b>Release date</b> <span>{movie.first_air_date}</span>.
+              </div>
+              <div>
+                <b>Status:</b>{" "}
+                <span>{movie.status ? "Lançado" : "Sem informações"}.</span>
+              </div>
             </div>
           </div>
         </div>

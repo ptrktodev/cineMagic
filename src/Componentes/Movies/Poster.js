@@ -41,9 +41,9 @@ const Poster = () => {
   return (
     <section className="container">
       <div className="poster animeLeft">
-        <div className="imagemCentral box">
-          <img src={`${imageURL}${movie.poster_path}`} />
-        </div>
+        {/*         <div className="imagemCentral box">
+          <img src={`${imageURL}${movie.backdrop_path}`} />
+        </div> */}
         <div className="Infos box">
           <div className="boxInfos box">
             <h1>{movie.original_title}</h1>

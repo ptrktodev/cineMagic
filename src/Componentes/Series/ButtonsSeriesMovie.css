@@ -1,0 +1,10 @@
+.buttonsCount {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.buttonsCount:hover {
+  font-weight: bold;
+}

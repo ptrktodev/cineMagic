@@ -23,12 +23,12 @@ const Footer = () => {
           </a>
         </div>
         <div>
+          <p>CineMagic. Alguns direitos reservados.</p>
+        </div>
+        <div>
           <span>Info</span>
           <span>Support</span>
           <span>Marketing</span>
-        </div>
-        <div>
-          <p>CineMagic. Alguns direitos reservados.</p>
         </div>
       </footer>
     </section>

@@ -2,6 +2,7 @@ import React from "react";
 import "./NotFound.css";
 import Button from "./Componentes/Fixed/ButtonHeader";
 import { ReactComponent as Flash } from "./Assets/flash.svg";
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
@@ -13,7 +14,9 @@ const NotFound = () => {
           We're sorry, the page you request could not be found. Please go back
           to the homepage.{" "}
         </p>
-        <Button>Go Home</Button>
+        <Link to="/">
+          <Button>Go Home</Button>
+        </Link>
       </div>
     </div>
   );

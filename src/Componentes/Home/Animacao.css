@@ -1,0 +1,52 @@
+.carrosel {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.carrosel::-webkit-scrollbar {
+  display: none;
+}
+
+.inner {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.item {
+  min-height: 200px;
+  min-width: 150px;
+  padding: 0.3rem;
+}
+
+.imagem {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.1s ease-in;
+}
+
+.imagem:hover {
+  transform: scale(1.05);
+}
+
+.ContentAction {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttonCarrosel {
+  background: none;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s ease-out;
+  user-select: none;
+}
+
+.buttonCarrosel:hover {
+  transform: scale(1.4);
+}
+
+.buttonCarrosel img {
+  padding: 2rem 0;
+}

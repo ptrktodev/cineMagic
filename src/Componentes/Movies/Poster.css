@@ -4,7 +4,8 @@
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
-  margin-bottom: 13rem;
+  margin-bottom: 8rem;
+  color: aliceblue;
 }
 
 .box {
@@ -16,18 +17,24 @@
 .imagemCentral {
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  width: 100%;
+  height: 30rem;
   gap: 1rem;
 }
 
 .Infos {
   justify-content: flex-start;
   align-items: flex-end;
+  height: 25rem;
+}
+
+.imagemCentral {
+  align-items: center;
+  margin-top: 1rem;
 }
 
 .imagemCentral img {
-  max-width: 100%;
-  border-radius: 0.6rem;
+  width: 62%;
 }
 
 .boxInfos {
@@ -63,23 +70,29 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+  gap: 0.5rem;
 }
 .networkImagem {
-  width: 30%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  clip-path: circle();
+  background: rgb(255, 255, 255);
 }
 
 .networkImagem img {
-  width: 70%;
+  width: 15%;
+  object-fit: cover;
+  justify-content: center;
+  margin: 1rem 0;
 }
 
 .VideoYoutube {
   width: 100%;
-  height: 22rem;
+  height: 25rem;
   justify-content: center;
   margin: 1rem 0;
 }
@@ -94,6 +107,7 @@
   margin-top: 2rem;
   width: 100%;
   padding: 0 1rem;
+
   flex-wrap: wrap;
 }
 
@@ -110,6 +124,9 @@
 /* == ==*/
 
 @media (max-width: 800px) {
+  .poster {
+    margin-bottom: 12rem;
+  }
   .section {
     flex-direction: column;
     align-items: center;
@@ -137,7 +154,17 @@
     border-radius: 0.6rem;
   }
 
+  .section {
+    width: 100%;
+    height: 100%;
+  }
+  .VideoYoutube {
+    width: 100%;
+    height: 15rem;
+  }
+
   .Video {
-    height: 18rem;
+    width: 80%;
+    height: 100%;
   }
 }

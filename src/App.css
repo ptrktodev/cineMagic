@@ -6,12 +6,11 @@
 body {
   padding-top: 6rem;
   margin: 0px;
-  --color-primary: #000000;
-  --color-secondary: #494949;
+  color: white;
   --size-primary: 1rem;
   --size-title: 2rem;
-  --size-subtitle: 1.5rem
-  background: rgb(255, 255, 255);
+  --size-subtitle: 1.5rem;
+  background: #000000;
   font-family: "Poppins", sans-serif;
 }
 
@@ -64,7 +63,7 @@ a {
 }
 
 .container {
-  max-width: 60rem;
+  max-width: 70rem;
   padding: 0 1rem;
   margin: 0 auto;
 }
@@ -94,7 +93,7 @@ a {
 .animeLeft {
   opacity: 0;
   transform: translateX(-20px);
-  animation: animeLeft 0.7s forwards;
+  animation: animeLeft 0.9s forwards;
 }
 
 @keyframes animeLeft {
@@ -108,4 +107,8 @@ a {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 6rem);
+}
+
+.padding {
+  padding-bottom: 6rem;
 }

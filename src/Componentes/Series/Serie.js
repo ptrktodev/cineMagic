@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import TitleHead from "../../TitleHead";
 import styles from "../Movies/Movie.module.css";
+import "./ButtonsSeriesMovie.css";
 
 const Home = () => {
   const [movies, setMovies] = React.useState([]);

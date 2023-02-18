@@ -8,10 +8,12 @@
   align-items: center;
   width: 100%;
   padding: 1rem 0;
+  color: #ffffff;
 }
 
 .LoginInput p {
   font-size: 0.8rem;
+  color: #ffffff;
   margin: 1.5rem 0;
 }
 
@@ -21,6 +23,8 @@
 
 .LoginLink {
   width: 100%;
+  color: #ffffff;
+
   display: flex;
   gap: 2rem;
   justify-content: center;
