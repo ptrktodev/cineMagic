@@ -27,7 +27,7 @@ const Search = ({ title }) => {
   }
 
   return (
-    <section className="group">
+    <section className={value ? "group ativo" : "group"}>
       <div className="Search">
         <input
           placeholder={`Search ${title}`}
@@ -40,9 +40,11 @@ const Search = ({ title }) => {
           &#x2715;
         </span>
       </div>
-      <div className="results">
-        {search && <SearchPage category={title} results={search} />}
-      </div>
+      {search && (
+        <div className="results">
+          {search && <SearchPage category={title} results={search} />}
+        </div>
+      )}
     </section>
   );
 };

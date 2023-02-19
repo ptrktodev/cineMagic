@@ -1,14 +1,18 @@
 import React from "react";
-import styles from "./Header.module.css";
 import { Link, useLocation } from "react-router-dom";
-import { ReactComponent as Pop } from "./Assets/popcorn.svg";
 import Button from "./Componentes/Fixed/ButtonHeader";
 import Search from "./Componentes/Fixed/Search";
+import { ReactComponent as Pop } from "./Assets/popcorn.svg";
+import { ReactComponent as Main } from "./Assets/main.svg";
+import { ReactComponent as Closed } from "./Assets/Closed.svg";
+import { ReactComponent as Home } from "./Assets/Home.svg";
+import "./Header.css";
 
 const Header = () => {
   const { pathname } = useLocation();
   const [ativo, setAtivo] = React.useState(false);
   const [msg, setMsg] = React.useState("");
+  const [classe, setClasse] = React.useState(null);
   //const { x } = React.useContext(UserContext);
 
   React.useEffect(() => {
@@ -23,26 +27,43 @@ const Header = () => {
     }
   }, [pathname]);
 
+  function toggleMain() {
+    setClasse(true);
+  }
+  function OfftoggleMain() {
+    setClasse(false);
+  }
+
   return (
-    <header className={styles.header}>
-      <nav className={`${styles.nav} container`}>
-        <Link to="/" className={styles.logo} aria-label="Dogs - Home">
+    <header className="header">
+      <nav className="nav container">
+        <Link to="/" className="logo" aria-label="Dogs - Home">
           <Pop />
         </Link>
-        <ul className={styles.ul}>
-          <div className={styles.barraSearch}>
-            {ativo && <Search title={msg} />}
-          </div>
-          <Link to="/movies" className={styles.login}>
-            <Button>Movies</Button>
-          </Link>
-          <Link to="/series" className={styles.login}>
-            <Button>Series</Button>
-          </Link>
-          <Link to="/login" className={styles.login}>
-            <Button>Login</Button>
-          </Link>
-        </ul>
+        <div className="barraSearch">{ativo && <Search title={msg} />}</div>
+        <div className={classe ? "ativoMain" : "mainMobile"}>
+          <button className="mainMobileButton">
+            {classe ? (
+              <Closed onClick={OfftoggleMain} />
+            ) : (
+              <Main onClick={toggleMain} />
+            )}
+          </button>
+          <ul className="ul">
+            <Link onClick={OfftoggleMain} to="/">
+              {classe && <Home />}
+            </Link>
+            <Link to="/movies" className="login" onClick={OfftoggleMain}>
+              <Button>Movies</Button>
+            </Link>
+            <Link to="/series" className="login" onClick={OfftoggleMain}>
+              <Button>Series</Button>
+            </Link>
+            <Link to="/login" className="login" onClick={OfftoggleMain}>
+              <Button>Login</Button>
+            </Link>
+          </ul>
+        </div>
       </nav>
     </header>
   );
