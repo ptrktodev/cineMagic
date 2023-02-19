@@ -58,7 +58,7 @@ const Home = () => {
         <div className={styles.div}>
           {movies.map((movie) => (
             <div key={movie.id} className={styles.divMovies}>
-              <Link to={`serie/${movie.id}`}>
+              <Link to={`poster/${movie.id}`}>
                 <img
                   src={`${image}${movie.poster_path}`}
                   alt=""

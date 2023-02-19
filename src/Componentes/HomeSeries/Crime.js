@@ -1,14 +1,14 @@
 import React from "react";
 import nextArrow from "../../Assets/nextArrow.svg";
+import { Link } from "react-router-dom";
 import prevArrow from "../../Assets/prevArrow.svg";
-import "./Animacao.css";
-import UseAPI from "./useAPI";
+import "../HomeMovies/Animacao.css";
+import UseAPI from "./useAPiTv";
 
-const Terror = () => {
-  //const [action, setAction] = React.useState([]);
+const Crime = () => {
   const refCarrosel = React.useRef(0);
 
-  const { Terror } = UseAPI();
+  const { Crime } = UseAPI();
 
   const image = "https://image.tmdb.org/t/p/w500/";
 
@@ -30,7 +30,7 @@ const Terror = () => {
 
   return (
     <section className="container">
-      <h1>Terror</h1>
+      <h1>Crime</h1>
       <div className="ContentAction">
         <button onClick={clickCarrosel} className="buttonCarrosel">
           {" "}
@@ -39,9 +39,11 @@ const Terror = () => {
 
         <div className="carrosel" ref={refCarrosel}>
           <div className="inner">
-            {Terror.map((img) => (
+            {Crime.map((img) => (
               <div key={img.id} className="item animeLeft">
-                <img src={`${image}${img.poster_path}`} className="imagem" />
+                <Link to={`/series/poster/${img.id}`}>
+                  <img src={`${image}${img.poster_path}`} />
+                </Link>
               </div>
             ))}
           </div>
@@ -54,4 +56,4 @@ const Terror = () => {
   );
 };
 
-export default Terror;
+export default Crime;

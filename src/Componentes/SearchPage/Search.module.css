@@ -1,0 +1,96 @@
+.paddingBottom {
+  padding-bottom: 6rem;
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  padding-bottom: 0rem;
+  color: #ffff;
+  gap: 0.5rem;
+  background: black;
+  border-radius: 0.5rem;
+}
+
+.divMovies {
+  background: rgba(255, 255, 255, 0.132);
+  border-radius: 0.6rem;
+  width: 100%;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  text-align: center;
+  transition: 0.6s ease-in;
+}
+
+.detalhes {
+  width: 70%;
+}
+
+.divMoviesImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.divMovies img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+.divMovies h3 {
+  width: 100%;
+  font-size: 0.7rem;
+}
+
+.div_buttons {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  gap: 1.4rem;
+}
+
+.div_buttons p {
+  font-weight: 600;
+}
+
+.buttonsCount {
+  background: rgba(0, 0, 0, 0.172);
+  color: #000000;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+}
+
+@media (max-width: 880px) {
+  .divMovies {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 20rem;
+  }
+  .divMovies img {
+    width: 100%;
+    height: 100%;
+  }
+  .paddingBottom {
+    padding-bottom: 10rem;
+  }
+  .divMoviesImg {
+    height: 100%;
+    width: 70%;
+  }
+  .detalhes {
+    width: 50%;
+  }
+}

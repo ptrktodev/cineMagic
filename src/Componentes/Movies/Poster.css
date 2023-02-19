@@ -10,22 +10,7 @@
 
 .box {
   display: flex;
-  padding: 1.5rem 1rem;
-}
-
-.Infos,
-.imagemCentral {
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 30rem;
-  gap: 1rem;
-}
-
-.Infos {
-  justify-content: flex-start;
-  align-items: flex-end;
-  height: 25rem;
+  padding: 1rem 1rem;
 }
 
 .imagemCentral {
@@ -39,7 +24,6 @@
 
 .boxInfos {
   flex-direction: column;
-  gap: 0.5rem;
   width: 100%;
   gap: 0.5rem;
 }
@@ -104,10 +88,9 @@
 }
 
 .section {
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 100%;
-  padding: 0 1rem;
-
+  padding: 0rem 1rem;
   flex-wrap: wrap;
 }
 
@@ -130,6 +113,7 @@
   .section {
     flex-direction: column;
     align-items: center;
+    margin-top: 1rem;
   }
 
   .poster {

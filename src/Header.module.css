@@ -16,9 +16,19 @@
 
 .ul {
   display: flex;
+  align-items: center;
   gap: 1rem;
+  max-height: 40px;
 }
 
 .logo {
   padding: 0.5rem 0;
+}
+
+.barraSearch {
+  display: flex;
+  align-items: flex-start;
+  height: 2rem;
+  justify-content: flex-start;
+  width: 16rem;
 }

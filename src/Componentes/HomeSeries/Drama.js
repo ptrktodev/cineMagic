@@ -1,14 +1,14 @@
 import React from "react";
 import nextArrow from "../../Assets/nextArrow.svg";
+import { Link } from "react-router-dom";
 import prevArrow from "../../Assets/prevArrow.svg";
-import "./Animacao.css";
-import UseAPI from "./useAPI";
+import "../HomeMovies/Animacao.css";
+import UseAPI from "./useAPiTv";
 
-const Acao = () => {
-  //const [action, setAction] = React.useState([]);
+const Drama = () => {
   const refCarrosel = React.useRef(0);
 
-  const { Adventure } = UseAPI();
+  const { Drama } = UseAPI();
 
   const image = "https://image.tmdb.org/t/p/w500/";
 
@@ -30,7 +30,7 @@ const Acao = () => {
 
   return (
     <section className="container">
-      <h1>Aventura</h1>
+      <h1>Drama</h1>
       <div className="ContentAction">
         <button onClick={clickCarrosel} className="buttonCarrosel">
           {" "}
@@ -39,9 +39,11 @@ const Acao = () => {
 
         <div className="carrosel" ref={refCarrosel}>
           <div className="inner">
-            {Adventure.map((img) => (
+            {Drama.map((img) => (
               <div key={img.id} className="item animeLeft">
-                <img src={`${image}${img.poster_path}`} className="imagem" />
+                <Link to={`/series/poster/${img.id}`}>
+                  <img src={`${image}${img.poster_path}`} />
+                </Link>
               </div>
             ))}
           </div>
@@ -54,4 +56,4 @@ const Acao = () => {
   );
 };
 
-export default Acao;
+export default Drama;
