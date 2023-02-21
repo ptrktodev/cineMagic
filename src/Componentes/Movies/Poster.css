@@ -74,6 +74,10 @@
   margin: 1rem 0;
 }
 
+.boxInfos a span {
+  color: aliceblue;
+}
+
 .VideoYoutube {
   width: 100%;
   height: 25rem;
