@@ -3,7 +3,8 @@
   position: fixed;
   width: 100%;
   z-index: 10000;
-  background: #000000;
+  background: #00000091;
+  backdrop-filter: blur(8px);
   top: 0;
 }
 

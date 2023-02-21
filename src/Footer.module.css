@@ -5,7 +5,8 @@
   right: 0;
   z-index: 10000;
   left: 0;
-  background: #000000;
+  background: #0000004b;
+  backdrop-filter: blur(8px);
   color: var(--color-primary);
   box-shadow: 0px -1px 1px rgba(183, 183, 183, 0.388);
   user-select: none;
