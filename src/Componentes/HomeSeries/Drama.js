@@ -30,7 +30,7 @@ const Drama = () => {
 
   return (
     <section className="container">
-      <h1>Drama</h1>
+      <h1 className="titleHome">Drama</h1>
       <div className="ContentAction">
         <button onClick={clickCarrosel} className="buttonCarrosel">
           {" "}

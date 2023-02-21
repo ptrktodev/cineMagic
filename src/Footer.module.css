@@ -11,6 +11,7 @@
   user-select: none;
   color: aliceblue;
 }
+
 .footer {
   display: flex;
   align-items: center;
@@ -41,5 +42,15 @@
     margin: 0.7rem 0;
     gap: 1rem;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    gap: 4px;
+    font-size: 0.7rem;
+  }
+  .business span {
+    display: none;
   }
 }

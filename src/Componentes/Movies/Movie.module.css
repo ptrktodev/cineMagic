@@ -1,5 +1,5 @@
 .paddingBottom {
-  padding-bottom: 6rem;
+  padding-bottom: 5rem;
 }
 
 .div {
@@ -73,5 +73,17 @@
   }
   .paddingBottom {
     padding-bottom: 10rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .paddingBottom {
+    padding-bottom: 4rem;
+  }
+  .divMovies img {
+    height: 10rem;
+  }
+  .divMovies {
+    font-size: 0.6rem;
   }
 }

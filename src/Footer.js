@@ -25,7 +25,7 @@ const Footer = () => {
         <div>
           <p>CineMagic. Alguns direitos reservados.</p>
         </div>
-        <div>
+        <div className={styles.business}>
           <span>Info</span>
           <span>Support</span>
           <span>Marketing</span>

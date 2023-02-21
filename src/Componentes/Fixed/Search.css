@@ -60,3 +60,9 @@ input:hover {
   background-color: #fff;
   box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
 }
+
+@media (max-width: 400px) {
+  .input::placeholder {
+    font-size: 0.5rem;
+  }
+}

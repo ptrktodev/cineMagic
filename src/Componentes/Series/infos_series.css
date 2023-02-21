@@ -23,6 +23,7 @@
 .posterImagem {
   display: flex;
   justify-content: center;
+  height: 100%;
 }
 
 .posterInfos {
@@ -33,7 +34,7 @@
 }
 
 .quadro img {
-  height: 20rem;
+  height: 100%;
   width: 90%;
   object-fit: cover;
 }
@@ -45,8 +46,22 @@
   }
   .quadro {
     width: 42%;
+    margin-top: 2rem;
+    gap: 0rem;
   }
   .quadro img {
     width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .posterImagem {
+    height: 100%;
+  }
+  .quadro {
+    gap: 0rem;
+  }
+  .posterInfos {
+    font-size: 0.7rem;
   }
 }

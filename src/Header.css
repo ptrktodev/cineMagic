@@ -35,7 +35,7 @@
   align-items: flex-start;
   height: 2rem;
   justify-content: flex-start;
-  width: 16rem;
+  width: 100%;
 }
 
 .mainMobileButton {
@@ -76,5 +76,13 @@
     flex-direction: column;
     height: 25vh;
     visibility: visible;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
   }
 }

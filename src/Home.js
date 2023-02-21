@@ -6,6 +6,7 @@ import TitleHead from "./TitleHead";
 import Comedia from "./Componentes/HomeSeries/Comedia";
 import Crime from "./Componentes/HomeSeries/Crime";
 import Drama from "./Componentes/HomeSeries/Drama";
+import "./Home.css";
 
 // https://api.themoviedb.org/3/genre/movie/list?api_key=SUA_CHAVE_DE_API&language=pt-BR
 
@@ -14,13 +15,13 @@ const Home = () => {
     <section className="container">
       <TitleHead title="Home" />
       <div className="boxHome">
-        <h1 className="title">FILMES</h1>
+        <h1 className="titleFullHome">FILMES</h1>
         <div>
           <Animacao />
           <Aventura />
           <Terror />
         </div>
-        <h1 className="title">SÉRIES</h1>
+        <h1 className="titleFullHome">SÉRIES</h1>
         <div>
           <Comedia />
           <Crime />

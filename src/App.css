@@ -103,3 +103,9 @@ a {
 .boxHome {
   margin-bottom: 13rem;
 }
+
+@media (max-width: 400px) {
+  .container {
+    padding: 0 0.4rem;
+  }
+}
