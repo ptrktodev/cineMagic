@@ -1,14 +1,47 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-import LoginForm from "./LoginForm";
+import "../Login/Login.css";
+import Me from "../../Assets/me.jpg";
+import Tmdb from "../../Assets/tmdb.png";
+import ReactJS from "../../Assets/reactjs.png";
+import { ReactComponent as Us } from "../../Assets/us.svg";
+import { ReactComponent as Brazil } from "../../Assets/brazil.svg";
+import Br from "./Br";
+import Usa from "./Us";
 
 const Login = () => {
+  const [ativo, setAtivo] = React.useState(false);
+
+  function langClickBr() {
+    setAtivo(true);
+  }
+  function langClickUs() {
+    setAtivo(false);
+  }
+
   return (
-    <section>
-      <div>
-        <Routes>
-          <Route path="/" element={<LoginForm />} />
-        </Routes>
+    <section className="container padding">
+      <div className="boxLogin">
+        <div>
+          <img src={Me} className="country" />
+        </div>
+        <li className="Country">
+          <li onClick={langClickUs}>
+            <Us />
+            <span>Lang: US</span>
+          </li>
+          <li onClick={langClickBr}>
+            <Brazil />
+            <span>Lang: BR</span>
+          </li>
+        </li>
+        <div className="componCountry">{ativo ? <Br /> : <Usa />}</div>
+        <div>
+          <h3>Tools work</h3>
+          <li className="toolsWork">
+            <img src={ReactJS} />
+            <img src={Tmdb} />
+          </li>
+        </div>
       </div>
     </section>
   );

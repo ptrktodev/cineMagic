@@ -61,8 +61,8 @@ const Header = () => {
                 <Link to="/series" className="login" onClick={OfftoggleMain}>
                   <Button>Series</Button>
                 </Link>
-                <Link to="/login" className="login" onClick={OfftoggleMain}>
-                  <Button>Login</Button>
+                <Link to="/sobre" className="login" onClick={OfftoggleMain}>
+                  <Button>Sobre</Button>
                 </Link>
               </ul>
             </div>

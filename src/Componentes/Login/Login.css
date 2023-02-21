@@ -1,0 +1,90 @@
+.padding {
+  padding-bottom: 10rem;
+}
+
+.boxLogin {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.Country {
+  width: 100%;
+  gap: 0.5rem;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Country li {
+  cursor: pointer;
+  background: rgb(39, 39, 39);
+  border-radius: 8px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  transition: 0.3s ease-in;
+}
+
+.Country li:hover {
+  transform: scale(1.06);
+}
+
+.boxLogin div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.boxLogin div p {
+  width: 40ch;
+  font-size: 1.5rem;
+}
+
+.me {
+  width: 30%;
+  clip-path: circle();
+}
+
+.boxLogin div h3 {
+  font-size: 1.8rem;
+}
+
+.toolsWork {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 2rem;
+}
+
+.toolsWork img {
+  margin-top: 1rem;
+  width: 5%;
+}
+
+@media (max-width: 1000px) {
+  .boxLogin {
+    gap: 3rem;
+  }
+  .me {
+    width: 50%;
+    clip-path: circle();
+  }
+  .boxLogin div p {
+    width: 30ch;
+    font-size: 1.5rem;
+  }
+  .boxLogin div h3 {
+    font-size: 2.5rem;
+  }
+  .toolsWork img {
+    margin-top: 1rem;
+    width: 10%;
+  }
+}

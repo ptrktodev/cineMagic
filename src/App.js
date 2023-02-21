@@ -21,7 +21,7 @@ function App() {
             <Route path="search" element={<SearchPage />} />
             <Route path="movies/*" element={<HomeMovie />} />
             <Route path="series/*" element={<HomeSerie />} />
-            <Route path="login/*" element={<Login />} />
+            <Route path="sobre/*" element={<Login />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
