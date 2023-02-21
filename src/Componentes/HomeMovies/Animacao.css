@@ -66,4 +66,7 @@
   .titleHome {
     font-size: 1.4rem;
   }
+  .buttonCarrosel {
+    display: none;
+  }
 }
