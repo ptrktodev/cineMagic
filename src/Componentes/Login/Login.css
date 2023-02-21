@@ -42,8 +42,8 @@
   width: 100%;
 }
 .boxLogin div p {
-  width: 40ch;
   font-size: 1.5rem;
+  border: 2px solid red;
 }
 
 .me {
@@ -77,7 +77,6 @@
     clip-path: circle();
   }
   .boxLogin div p {
-    width: 30ch;
     font-size: 1.5rem;
   }
   .boxLogin div h3 {
@@ -91,7 +90,6 @@
 
 @media (max-width: 400px) {
   .boxLogin div p {
-    width: 30ch;
     font-size: 1rem;
   }
   .boxLogin div h3 {
