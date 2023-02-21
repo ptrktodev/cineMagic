@@ -42,7 +42,7 @@ const Terror = () => {
 
   return (
     <section className="container">
-      <h1>Terror</h1>
+      <h1>Horror</h1>
       <div className="ContentAction">
         <button onClick={clickCarrosel} className="buttonCarrosel">
           {" "}

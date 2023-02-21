@@ -40,29 +40,33 @@ const Header = () => {
         <Link to="/" className="logo" aria-label="Dogs - Home">
           <Pop />
         </Link>
-        <div className="barraSearch">{ativo && <Search title={msg} />}</div>
-        <div className={classe ? "ativoMain" : "mainMobile"}>
-          <button className="mainMobileButton">
-            {classe ? (
-              <Closed onClick={OfftoggleMain} />
-            ) : (
-              <Main onClick={toggleMain} />
-            )}
-          </button>
-          <ul className="ul">
-            <Link onClick={OfftoggleMain} to="/">
-              {classe && <Home />}
-            </Link>
-            <Link to="/movies" className="login" onClick={OfftoggleMain}>
-              <Button>Movies</Button>
-            </Link>
-            <Link to="/series" className="login" onClick={OfftoggleMain}>
-              <Button>Series</Button>
-            </Link>
-            <Link to="/login" className="login" onClick={OfftoggleMain}>
-              <Button>Login</Button>
-            </Link>
-          </ul>
+        <div className="menu">
+          <div className="barraSearch">{ativo && <Search title={msg} />}</div>
+          <div>
+            <div className={classe ? "ativoMain" : "mainMobile"}>
+              <button className="mainMobileButton">
+                {classe ? (
+                  <Closed onClick={OfftoggleMain} />
+                ) : (
+                  <Main onClick={toggleMain} />
+                )}
+              </button>
+              <ul className="ul">
+                <Link onClick={OfftoggleMain} to="/">
+                  {classe && <Home />}
+                </Link>
+                <Link to="/movies" className="login" onClick={OfftoggleMain}>
+                  <Button>Movies</Button>
+                </Link>
+                <Link to="/series" className="login" onClick={OfftoggleMain}>
+                  <Button>Series</Button>
+                </Link>
+                <Link to="/login" className="login" onClick={OfftoggleMain}>
+                  <Button>Login</Button>
+                </Link>
+              </ul>
+            </div>
+          </div>
         </div>
       </nav>
     </header>

@@ -7,8 +7,14 @@
   top: 0;
 }
 
+.menu {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+}
 .nav {
   display: flex;
+  padding: 0 2rem;
   justify-content: space-between;
   align-items: center;
   height: 5rem;

@@ -31,7 +31,7 @@ const Acao = () => {
 
   return (
     <section className="container">
-      <h1>Aventura</h1>
+      <h1>Adventure</h1>
       <div className="ContentAction">
         <button onClick={clickCarrosel} className="buttonCarrosel">
           {" "}
