@@ -10,6 +10,14 @@
   width: 100%;
 }
 
+.section h1 {
+  color: rgb(255, 239, 15);
+}
+
+.boxInfos h1 {
+  font-size: 2.5rem;
+}
+
 .quadro {
   margin-top: 1rem;
   width: 23%;

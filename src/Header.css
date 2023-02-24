@@ -61,10 +61,11 @@
     position: absolute;
     width: 100%;
     left: 0;
-    background: rgb(0, 0, 0);
+    background: #00000091;
+    backdrop-filter: blur(8px);
     z-index: 1000;
     border-radius: 0.8rem;
-    top: 4rem;
+    top: 5rem;
     visibility: hidden;
     overflow-y: hidden;
     transition: 0.4s;

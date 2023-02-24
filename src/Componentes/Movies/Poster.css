@@ -8,6 +8,9 @@
   color: aliceblue;
 }
 
+b {
+  color: red;
+}
 .box {
   display: flex;
   padding: 1rem 1rem;
@@ -75,7 +78,7 @@
 }
 
 .boxInfos a span {
-  color: rgb(255, 34, 34);
+  color: rgb(255, 255, 255);
 }
 
 .VideoYoutube {
