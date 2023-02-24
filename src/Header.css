@@ -3,8 +3,7 @@
   position: fixed;
   width: 100%;
   z-index: 10000;
-  background: #00000091;
-  backdrop-filter: blur(8px);
+  background: #000000ec;
   top: 0;
 }
 
@@ -61,8 +60,7 @@
     position: absolute;
     width: 100%;
     left: 0;
-    background: #00000091;
-    backdrop-filter: blur(8px);
+    background: #000000ec;
     z-index: 1000;
     border-radius: 0.8rem;
     top: 5rem;
