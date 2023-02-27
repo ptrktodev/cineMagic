@@ -1,8 +1,9 @@
 import React from "react";
+import "./Lang.css";
 
 const Us = () => {
   return (
-    <div>
+    <div className="Lang">
       <p>
         This project was built using ReactJS together with CSS for the styling
         and the Tmdb API for the information and covers of movies and series, as
@@ -11,7 +12,7 @@ const Us = () => {
       <br />
       <p>
         This is my first project where I work with several amazing features
-        found here. ❤️
+        found here.
       </p>
     </div>
   );

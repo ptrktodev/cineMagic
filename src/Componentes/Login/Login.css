@@ -41,9 +41,6 @@
   align-items: center;
   width: 100%;
 }
-.boxLogin div p {
-  font-size: 1.5rem;
-}
 
 .me {
   width: 30%;
@@ -75,9 +72,7 @@
     width: 50%;
     clip-path: circle();
   }
-  .boxLogin div p {
-    font-size: 1.5rem;
-  }
+
   .boxLogin div h3 {
     font-size: 2.5rem;
   }
@@ -88,9 +83,6 @@
 }
 
 @media (max-width: 400px) {
-  .boxLogin div p {
-    font-size: 1rem;
-  }
   .boxLogin div h3 {
     font-size: 2rem;
   }

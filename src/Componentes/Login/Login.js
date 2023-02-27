@@ -7,6 +7,7 @@ import { ReactComponent as Us } from "../../Assets/us.svg";
 import { ReactComponent as Brazil } from "../../Assets/brazil.svg";
 import Br from "./Br";
 import Usa from "./Us";
+import Head from "../../TitleHead";
 
 const Login = () => {
   const [ativo, setAtivo] = React.useState(false);
@@ -20,6 +21,7 @@ const Login = () => {
 
   return (
     <section className="container padding">
+      <Head title="About" />
       <div className="boxLogin">
         <div>
           <img src={Me} className="country" />
